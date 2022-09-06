@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1.6rem 0;
 }
 
 .logo {
@@ -11,23 +11,86 @@
 }
 
 .logo__img {
-  width: 11rem;
-  height: 100%;
+  height: 5rem;
+  max-height: 100%;
+}
+
+.navClosed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.navClosed .nav {
+  flex: 1;
+}
+
+.navClosed .nav__list {
+  justify-content: center;
+}
+
+.navOpen {
+  flex-direction: column;
+  z-index: 1000;
+  background-color: #fff;
+  height: 100vh;
+  width: 100%;
+  padding: 15rem 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navOpen .nav__list {
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.navOpen .nav__link {
+  font-size: 2.2rem;
+}
+
+.navOpen .actions {
+  justify-content: center;
+  gap: 5rem;
+}
+
+.navBtn {
+  top: 4.5rem;
+  right: 4rem;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 2000;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  display: none;
+  background-color: transparent;
+}
+
+.navBtn svg {
+  font-size: 4rem;
 }
 
 .nav__list {
   display: flex;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 4rem;
 }
 
 .nav__link {
-  padding: 0.7rem 0.1rem;
-  font-size: 1.1rem;
+  display: inline-block;
+  padding: 1rem 0.2rem;
+  font-size: 1.7rem;
   color: var(--clr-grey-3);
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   position: relative;
+  border-bottom: 2px solid transparent;
 }
 
 .nav__link:hover,
@@ -37,14 +100,14 @@
 
 .actions {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .actions > * {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 1.6rem;
+  gap: 1rem;
+  font-size: 2.4rem;
   text-transform: capitalize;
 }
 
@@ -57,11 +120,11 @@
   content: attr(data-count);
   position: absolute;
   top: -5px;
-  right: -0.8rem;
+  right: -1rem;
   color: var(--clr-white);
   background-color: var(--clr-primary-5);
-  font-size: 0.8rem;
-  padding: 0.7rem;
+  font-size: 1.2rem;
+  padding: 1rem;
   border-radius: 50%;
   width: 1rem;
   height: 1rem;
@@ -73,4 +136,14 @@
 
 .login {
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .navClosed {
+    display: none;
+  }
+
+  .navBtn {
+    display: block;
+  }
 }
