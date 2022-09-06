@@ -136,7 +136,8 @@ p {
 .section {
   padding: 5rem 0;
 }
-.section-center {
+
+.container {
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
