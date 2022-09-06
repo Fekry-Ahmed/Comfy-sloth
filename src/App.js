@@ -17,15 +17,17 @@ const App = () => {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
-        <Route path="/checkout" element={<Chekout />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <main className="main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/checkout" element={<Chekout />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
       <Footer />
     </>
   );
