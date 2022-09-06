@@ -1,0 +1,19 @@
+.footer {
+  height: 5rem;
+  background-color: var(--clr-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: var(--clr-white);
+}
+
+.footer h5 {
+  /* text-transform: none; */
+  font-weight: 400;
+}
+
+.footer span {
+  color: var(--clr-primary-5);
+}
