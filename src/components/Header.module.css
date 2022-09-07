@@ -9,6 +9,7 @@
 .logo {
   display: flex;
   align-items: center;
+  margin-left: -1.6rem;
 }
 
 .logo__img {
@@ -71,6 +72,7 @@
   border: none;
   display: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .navBtn svg {

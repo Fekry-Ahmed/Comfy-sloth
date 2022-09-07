@@ -1,0 +1,32 @@
+.wrapper {
+  min-height: 10rem;
+  display: flex;
+  align-items: center;
+  background: var(--clr-primary-10);
+}
+
+.wrapper > div {
+}
+
+@media (max-width: 575px) {
+  .wrapper {
+    justify-content: center;
+  }
+}
+
+.wrapper h2 {
+  text-transform: capitalize;
+  align-items: center;
+  color: var(--clr-primary-1);
+  font-size: 2.5rem;
+}
+
+.wrapper a {
+  color: var(--clr-primary-3);
+  padding: 0.5rem;
+  padding-left: 0;
+}
+
+.wrapper span {
+  padding: 0.5rem;
+}

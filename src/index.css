@@ -60,6 +60,12 @@ html {
   font-size: 62.5%;
 }
 
+@media (max-width: 991px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
 body {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   background: var(--clr-white);
@@ -101,6 +107,10 @@ h5 {
   font-size: 0.875rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 /*  global classes */
 
 .section {
@@ -111,6 +121,12 @@ h5 {
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
+}
+
+@media (min-width: 991px) {
+  .container {
+    width: 95vw;
+  }
 }
 
 @keyframes spinner {
@@ -149,18 +165,26 @@ h5 {
   color: var(--clr-primary-1);
   background: var(--clr-primary-7);
 }
+
 .title {
-  text-align: center;
+  position: relative;
+  margin-bottom: 5rem;
+  font-size: 4rem;
 }
-.title .underline {
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
   width: 9rem;
-  height: 0.5rem;
+  height: 0.3rem;
   background: #49a6e9;
   background: var(--clr-primary-5);
   margin-left: auto;
   margin-right: auto;
 }
 
-.page-100 {
+.page {
   min-height: calc(100vh - 16.2rem);
 }
