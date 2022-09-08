@@ -12,7 +12,7 @@ const Contact = function (props) {
           tempore?
         </p>
         <form action="">
-          <input type="text" />
+          <input type="text" placeholder="Enter Email" />
           <button className="btn">subscribe</button>
         </form>
       </div>
