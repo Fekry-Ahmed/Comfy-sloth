@@ -28,7 +28,6 @@
 
 @media (max-width: 991px) {
   .paragraph {
-    padding: 0 3rem;
-    /* text-align: center; */
+    padding-left: 3rem;
   }
 }
