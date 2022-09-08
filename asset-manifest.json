@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/comfy-sloth/static/css/main.61bbc103.css",
-    "main.js": "/comfy-sloth/static/js/main.944d47df.js",
+    "main.css": "/comfy-sloth/static/css/main.2ce44af7.css",
+    "main.js": "/comfy-sloth/static/js/main.cb091ac0.js",
     "static/media/hero-bcg.jpeg": "/comfy-sloth/static/media/hero-bcg.a876f19f6786a3aca992.jpeg",
     "static/media/logo.svg": "/comfy-sloth/static/media/logo.221f6b13e6eaaad5828372464f73a1a4.svg",
     "index.html": "/comfy-sloth/index.html",
-    "main.61bbc103.css.map": "/comfy-sloth/static/css/main.61bbc103.css.map",
-    "main.944d47df.js.map": "/comfy-sloth/static/js/main.944d47df.js.map"
+    "main.2ce44af7.css.map": "/comfy-sloth/static/css/main.2ce44af7.css.map",
+    "main.cb091ac0.js.map": "/comfy-sloth/static/js/main.cb091ac0.js.map"
   },
   "entrypoints": [
-    "static/css/main.61bbc103.css",
-    "static/js/main.944d47df.js"
+    "static/css/main.2ce44af7.css",
+    "static/js/main.cb091ac0.js"
   ]
 }
