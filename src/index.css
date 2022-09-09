@@ -169,8 +169,10 @@ img {
 
 .title {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   font-size: 4rem;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .title::after {
@@ -178,12 +180,11 @@ img {
   position: absolute;
   bottom: -1rem;
   left: 0;
-  width: 9rem;
+  width: 10rem;
   height: 0.3rem;
-  background: #49a6e9;
   background: var(--clr-primary-5);
-  margin-left: auto;
-  margin-right: auto;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .page {

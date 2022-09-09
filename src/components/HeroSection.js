@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
-    <section className={`page-small ${classes.section}`}>
+    <section className={`section page-small ${classes.section}`}>
       <div className={`${classes.container} container`}>
         <div className={classes.text}>
           <h1>design your comfort zone</h1>
