@@ -1,8 +1,15 @@
 import React from 'react';
-import Product from './Product';
 import classes from './FeaturedProducts.module.css';
+import { useSelector } from 'react-redux';
+import { Loading, Product } from '../index';
 
-const FeaturedProducts = ({ products }) => {
+const FeaturedProducts = () => {
+  const { products, isLoading } = useSelector((state) => state.products);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <section className={`${classes.section} section`}>
       <h2 className={`title`}>Featured Products</h2>

@@ -1,5 +1,5 @@
 import React from 'react';
-import PageTitle from '../components/PageTitle';
+import { PageTitle } from '../components';
 import aboutImg from '../assets/hero-bcg.jpeg';
 import classes from './About.module.css';
 
