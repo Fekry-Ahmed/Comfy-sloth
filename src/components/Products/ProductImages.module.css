@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.main-img {
+  height: 50rem;
+  border-radius: 3px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery {
+  display: flex;
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 1.4rem;
+}
+
+.gallery img {
+  border-radius: 3px;
+  display: block;
+  height: 10rem;
+  object-fit: cover;
+  cursor: pointer;
+  width: 100%;
+}
+@media (max-width: 576px) {
+  .gallery img {
+    height: 7rem;
+  }
+}
+
+img.active {
+  border: 2px saddlebrown solid;
+}

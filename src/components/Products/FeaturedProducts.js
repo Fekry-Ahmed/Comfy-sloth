@@ -14,14 +14,17 @@ const FeaturedProducts = () => {
     <section className={`${classes.section} section`}>
       <h2 className={`title`}>Featured Products</h2>
       <div className={`container  ${classes.container} `}>
-        {products.map((product) => (
-          <Product
-            key={product.id}
-            name={product.name}
-            price={(product.price / 100).toFixed(2)}
-            imgUrl={product.image}
-          ></Product>
-        ))}
+        {products
+          .filter((product) => product.featured)
+          .map((product) => (
+            <Product
+              key={product.id}
+              id={product.id}
+              name={product.name}
+              price={(product.price / 100).toFixed(2)}
+              imgUrl={product.image}
+            ></Product>
+          ))}
       </div>
     </section>
   );

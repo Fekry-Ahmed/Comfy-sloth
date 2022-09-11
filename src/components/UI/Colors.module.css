@@ -1,0 +1,21 @@
+.colors {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.color {
+  all: unset;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.color svg {
+  color: #fff;
+  font-size: 1.1rem;
+}

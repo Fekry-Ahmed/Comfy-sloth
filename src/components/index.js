@@ -6,7 +6,12 @@ import PageTitle from './UI/PageTitle';
 import HeroSection from './HeroSection';
 import Loading from './UI/Loading';
 import FeaturedProducts from './Products/FeaturedProducts';
-import Product from './Products/Product';
+import Product from './Products/ProductCard';
+import ProductImages from './Products/ProductImages';
+import ProductInformation from './Products/ProductInformation';
+import Stars from './UI/Stars';
+import AmountButtons from './AmountButtons';
+import Colors from './UI/Colors';
 
 export {
   Header,
@@ -18,4 +23,9 @@ export {
   Loading,
   Product,
   FeaturedProducts,
+  ProductImages,
+  ProductInformation,
+  Stars,
+  AmountButtons,
+  Colors,
 };
