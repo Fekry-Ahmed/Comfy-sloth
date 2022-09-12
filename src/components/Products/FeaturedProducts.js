@@ -4,10 +4,14 @@ import { useSelector } from 'react-redux';
 import { Loading, Product } from '../index';
 
 const FeaturedProducts = () => {
-  const { products, isLoading } = useSelector((state) => state.products);
+  const { products, isLoading, error } = useSelector((state) => state.products);
 
   if (isLoading) {
     return <Loading />;
+  }
+
+  if (error) {
+    return <p>can't fetch data</p>;
   }
 
   return (

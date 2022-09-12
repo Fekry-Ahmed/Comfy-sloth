@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import useHttp from './hooks/use-http';
 import { useDispatch } from 'react-redux';
 import { getAllProducts } from './utils/api';
 import { productsActions } from './store/products-slice';
@@ -18,14 +17,19 @@ import {
 
 const App = () => {
   const dispatch = useDispatch();
-  const { sendRequest, data: products, status } = useHttp(getAllProducts, true);
-  useEffect(() => {
-    sendRequest();
-  }, [sendRequest]);
 
-  if (status === 'completed') {
-    dispatch(productsActions.initializeState(products));
-  }
+  useEffect(() => {
+    async function fetchData() {
+      dispatch(productsActions.fetchProducts());
+      try {
+        const data = await getAllProducts();
+        dispatch(productsActions.success(data));
+      } catch (error) {
+        dispatch(productsActions.error);
+      }
+    }
+    fetchData();
+  }, [dispatch]);
 
   return (
     <>
