@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classes from './FeaturedProducts.module.css';
-import { useSelector } from 'react-redux';
 import { Loading, Product } from '../index';
+import useHttp from '../../hooks/use-http';
+import { getAllProducts } from '../../utils/api';
 
 const FeaturedProducts = () => {
-  const { products, isLoading } = useSelector((state) => state.products);
+  const {
+    sendRequest,
+    status,
+    data: products,
+    error,
+  } = useHttp(getAllProducts, true);
 
-  if (isLoading) {
+  useEffect(() => {
+    sendRequest();
+  }, [sendRequest]);
+
+  if (status === 'pending') {
     return <Loading />;
+  }
+
+  if (error) {
+    return <p>Some thing went wrong</p>;
   }
 
   return (

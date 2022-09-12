@@ -1,9 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import useHttp from './hooks/use-http';
-import { useDispatch } from 'react-redux';
-import { getAllProducts } from './utils/api';
-import { productsActions } from './store/products-slice';
 import { Header, Footer } from './components';
 
 import {
@@ -17,16 +13,6 @@ import {
 } from './pages';
 
 const App = () => {
-  const dispatch = useDispatch();
-  const { sendRequest, data: products, status } = useHttp(getAllProducts, true);
-  useEffect(() => {
-    sendRequest();
-  }, [sendRequest]);
-
-  if (status === 'completed') {
-    dispatch(productsActions.initializeState(products));
-  }
-
   return (
     <>
       <Header />
