@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { getAllProducts } from './utils/api';
+import { productsActions } from './store/products-slice';
 import { Header, Footer } from './components';
 
 import {
@@ -13,6 +16,21 @@ import {
 } from './pages';
 
 const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    async function fetchData() {
+      dispatch(productsActions.fetchProducts());
+      try {
+        const data = await getAllProducts();
+        dispatch(productsActions.success(data));
+      } catch (error) {
+        dispatch(productsActions.error);
+      }
+    }
+    fetchData();
+  }, [dispatch]);
+
   return (
     <>
       <Header />
