@@ -26,7 +26,11 @@ const ProductDetail = () => {
   const { images, name } = product;
 
   if (status === 'pending') {
-    return <Loading />;
+    return (
+      <section className="section container">
+        <Loading />;
+      </section>
+    );
   }
 
   if (error) {

@@ -133,7 +133,7 @@ img {
   text-transform: uppercase;
   background: var(--clr-primary-5);
   color: var(--clr-primary-10);
-  padding: 0.8rem 1.2rem;
+  padding: 0.6rem 1rem;
   letter-spacing: var(--spacing);
   display: inline-block;
   font-weight: 400;

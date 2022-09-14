@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 20rem 1fr;
   grid-template-rows: auto 1fr;
+  gap: 3rem 1.5rem;
 }
 
 .wrapper > :first-child {

@@ -4,7 +4,7 @@ import classes from './Loading.module.css';
 
 const Loading = () => {
   return (
-    <section className={`container ${classes.loading}`}>
+    <section className={classes.loading}>
       <div className={classes.loading__spinner}></div>;
     </section>
   );

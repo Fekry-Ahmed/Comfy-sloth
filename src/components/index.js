@@ -15,6 +15,7 @@ import Colors from './UI/Colors';
 import Sort from './Sort';
 import Filter from './Filter';
 import GridView from './Products/GridView';
+import ListView from './Products/ListView';
 
 export {
   Header,
@@ -34,4 +35,5 @@ export {
   Sort,
   Filter,
   GridView,
+  ListView,
 };

@@ -6,6 +6,7 @@ const productsSlice = createSlice({
     products: null,
     isLoading: true,
     error: null,
+    gridView: true,
   },
 
   reducers: {
@@ -21,6 +22,16 @@ const productsSlice = createSlice({
     success(state, action) {
       state.isLoading = false;
       state.products = action.payload;
+    },
+
+    setGridView(state) {
+      state.gridView = true;
+      console.log(1);
+    },
+
+    setListView(state) {
+      state.gridView = false;
+      console.log(2);
     },
   },
 });
