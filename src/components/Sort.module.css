@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin-bottom: 3rem;
+}
+
+.view__buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 3rem;
+}
+
+.view__buttons svg {
+  font-size: 2.4rem;
+  padding: 0.2rem;
+  border: 1px solid var(--clr-black);
+  border-radius: 3px;
+}
+
+.view__buttons > .active {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+.count {
+  font-size: 1.6rem;
+}
+
+.form {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 100;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+
+.form input {
+}
+
+.form select {
+  font-size: 1.8rem;
+  border: none;
+  text-transform: capitalize;
+}
+
+.form option {
+}

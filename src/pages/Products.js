@@ -6,8 +6,8 @@ import classes from './Products.module.css';
 const Products = () => {
   return (
     <div className={`${classes.wrapper} container section`}>
-      <Sort className={classes.sort} />
       <Filter />
+      <Sort className={classes.sort} />
       <GridView />
     </div>
   );
