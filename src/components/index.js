@@ -12,6 +12,9 @@ import ProductInformation from './Products/ProductInformation';
 import Stars from './UI/Stars';
 import AmountButtons from './AmountButtons';
 import Colors from './UI/Colors';
+import Sort from './Sort';
+import Filter from './Filter';
+import GridView from './Products/GridView';
 
 export {
   Header,
@@ -28,4 +31,7 @@ export {
   Stars,
   AmountButtons,
   Colors,
+  Sort,
+  Filter,
+  GridView,
 };

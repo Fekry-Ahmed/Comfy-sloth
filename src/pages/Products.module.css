@@ -1,0 +1,9 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+.wrapper > :first-child {
+  grid-row: 1/ -1;
+}
