@@ -4,7 +4,6 @@ import classes from './Colors.module.css';
 
 const Colors = ({ colors }) => {
   const [mainColor, setMainColor] = useState(colors[0]);
-  console.log(colors);
 
   return (
     <div className={classes.colors}>

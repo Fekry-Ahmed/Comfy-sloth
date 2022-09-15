@@ -5,7 +5,9 @@ import Loading from '../UI/Loading';
 import classes from './GridView.module.css';
 
 const GridView = (props) => {
-  const { products, isLoading, error } = useSelector((state) => state.products);
+  const { filteredProducts, isLoading, error } = useSelector(
+    (state) => state.products
+  );
 
   if (isLoading) {
     return <Loading />;
@@ -13,7 +15,7 @@ const GridView = (props) => {
 
   return (
     <section className={classes.wrapper}>
-      {products.map((product) => (
+      {filteredProducts.map((product) => (
         <Product
           key={product.id}
           name={product.name}

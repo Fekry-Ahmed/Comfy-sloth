@@ -1,24 +1,21 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { getUniqueValues } from '../utils/helpers';
-import { Colors, colors } from '../components';
+import { Colors } from '../components';
 import classes from './Filter.module.css';
 
 const Filter = () => {
   const products = useSelector((state) => state.products.products);
-  console.log(products);
 
   const categories = getUniqueValues(products, 'category');
   const companies = getUniqueValues(products, 'company');
   const colors = getUniqueValues(products, 'colors');
 
-  console.log(categories, companies, colors);
-
   return (
     <section>
       <form
         action=""
-        className={classes.from}
+        className={classes.form}
         onSubmit={(e) => {
           e.preventDefault();
         }}
@@ -29,14 +26,14 @@ const Filter = () => {
         <div className={`${classes['form-control']} ${classes.category} `}>
           <h5>category</h5>
           {categories.map((category, index) => (
-            <button>{category}</button>
+            <button key={index}>{category}</button>
           ))}
         </div>
         <div className={`${classes['form-control']} ${classes.company} `}>
           <h5>company</h5>
           <select name="a" id="">
             {companies.map((company, index) => (
-              <option>{company}</option>
+              <option key={index}>{company}</option>
             ))}
           </select>
         </div>

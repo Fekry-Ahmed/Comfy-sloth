@@ -6,7 +6,9 @@ import classes from './Sort.module.css';
 
 const Sort = () => {
   const dispatch = useDispatch();
-  const isGridView = useSelector((state) => state.products.gridView);
+  const { isGridView, filteredProducts } = useSelector(
+    (state) => state.products
+  );
 
   return (
     <div className={classes.wrapper}>
@@ -24,12 +26,21 @@ const Sort = () => {
           }}
         />
       </div>
-      <span className={classes.count}>2 products found</span>
+      <span className={classes.count}>
+        {filteredProducts.length} products found
+      </span>
       <form className={classes.form}>
         <span>sort by</span>
-        <select name="sort" id="sort">
+        <select
+          name="sort"
+          id="sort"
+          onChange={(e) => {
+            console.log(1);
+            dispatch(productsActions.sortProducts(e.target.value));
+          }}
+        >
           <option value="priceLow">price (highest)</option>
-          <option value="PiceHigh">price (lowest)</option>
+          <option value="PriceHigh">price (lowest)</option>
           <option value="A_to_Z">name (A - Z)</option>
           <option value="Z_to_A">name (Z - A)</option>
         </select>

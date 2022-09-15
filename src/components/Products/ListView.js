@@ -5,7 +5,9 @@ import Loading from '../UI/Loading';
 import classes from './ListView.module.css';
 
 const GridView = (props) => {
-  const { products, isLoading, error } = useSelector((state) => state.products);
+  const { filteredProducts, isLoading, error } = useSelector(
+    (state) => state.products
+  );
 
   if (isLoading) {
     return <Loading />;
@@ -13,7 +15,7 @@ const GridView = (props) => {
 
   return (
     <section className={classes.wrapper}>
-      {products.map((product) => (
+      {filteredProducts.map((product) => (
         <div className={classes.product} key={product.id}>
           <div className={classes.product__img}>
             <img src={product.image} alt="" />
