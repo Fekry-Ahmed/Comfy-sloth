@@ -13,7 +13,7 @@ const ProductInformation = ({ product }) => {
     <div className={classes.details}>
       <h2 className={classes.title}>{name}</h2>
       <Stars stars={stars} />
-      <span className={classes.price}>$ {price}</span>
+      <span className={classes.price}>$ {price / 100}</span>
       <p className={classes.description}>{description}</p>
       <div className={classes.info}>
         <span>Available :</span>

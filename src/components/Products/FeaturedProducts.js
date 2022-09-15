@@ -25,7 +25,7 @@ const FeaturedProducts = () => {
               key={product.id}
               id={product.id}
               name={product.name}
-              price={(product.price / 100).toFixed(2)}
+              price={product.price}
               imgUrl={product.image}
             ></Product>
           ))}

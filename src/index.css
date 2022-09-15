@@ -147,6 +147,15 @@ img {
   font-size: 1.4rem;
 }
 
+.clear-btn {
+  background: var(--clr-red-dark);
+  color: var(--clr-white);
+  padding: 0.4rem 1.3rem;
+  border-radius: var(--radius);
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+
 .btn:hover {
   color: var(--clr-primary-1);
   background: var(--clr-primary-7);
