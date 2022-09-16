@@ -4,10 +4,18 @@ const productsSlice = createSlice({
   name: 'products',
   initialState: {
     products: [],
-    filteredProducts: [],
     isLoading: true,
     error: null,
     gridView: true,
+    filteredProducts: [],
+    filters: {
+      text: '',
+      category: 'all',
+      company: 'all',
+      colors: 'all',
+      price: 0,
+      shipping: false,
+    },
   },
 
   reducers: {
@@ -28,12 +36,10 @@ const productsSlice = createSlice({
 
     setGridView(state) {
       state.gridView = true;
-      console.log(1);
     },
 
     setListView(state) {
       state.gridView = false;
-      console.log(2);
     },
     sortProducts(state, action) {
       if (action.payload === 'priceLow') {
@@ -52,6 +58,51 @@ const productsSlice = createSlice({
         console.log(state.filteredProducts);
         state.filteredProducts.sort((a, b) => (a.name > b.name ? 1 : -1));
       }
+    },
+    updateFilters(state, action) {
+      state.filters[action.payload.name] = action.payload.value;
+
+      let filtered = [...state.products];
+
+      filtered = filtered.filter((p) => p.name.startsWith(state.filters.text));
+
+      if (!(state.filters.category === 'all')) {
+        filtered = filtered.filter(
+          (p) => p.category === state.filters.category
+        );
+      }
+
+      if (!(state.filters.company === 'all')) {
+        filtered = filtered.filter((p) => p.company === state.filters.company);
+      }
+
+      if (!(state.filters.colors === 'all')) {
+        filtered = filtered.filter((p) =>
+          p.colors.join().includes(state.filters.colors)
+        );
+      }
+
+      filtered = filtered.filter((p) => p.price > state.filters.price);
+
+      filtered = filtered.filter((p) => {
+        return state.filters.shipping ? p.shipping : true;
+      });
+
+      state.filteredProducts = filtered;
+    },
+
+    clearFilters(state) {
+      console.log(1);
+      state.filters = {
+        text: '',
+        category: 'all',
+        company: 'all',
+        colors: 'all',
+        price: 0,
+        shipping: false,
+      };
+
+      state.filteredProducts = [...state.products];
     },
   },
 });

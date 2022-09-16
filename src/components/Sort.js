@@ -6,7 +6,7 @@ import classes from './Sort.module.css';
 
 const Sort = () => {
   const dispatch = useDispatch();
-  const { isGridView, filteredProducts } = useSelector(
+  const { gridView: isGridView, filteredProducts } = useSelector(
     (state) => state.products
   );
 

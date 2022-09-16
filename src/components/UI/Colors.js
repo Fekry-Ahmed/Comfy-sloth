@@ -2,14 +2,19 @@ import React, { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
 import classes from './Colors.module.css';
 
-const Colors = ({ colors }) => {
+const Colors = ({ colors, onClick }) => {
   const [mainColor, setMainColor] = useState(colors[0]);
 
   return (
     <div className={classes.colors}>
       {colors.map((color, index) => (
         <button
-          onClick={() => setMainColor(color)}
+          data-color={color}
+          name="colors"
+          onClick={(e) => {
+            if (onClick) onClick(e);
+            setMainColor(color);
+          }}
           className={`${classes.color}`}
           key={index}
           style={{

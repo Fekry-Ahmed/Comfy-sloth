@@ -58,7 +58,11 @@ button {
 .colors {
 }
 
-.price {
+.price p {
+  font-size: 1.6rem;
+  color: var(--clr-grey-5);
+  margin-bottom: 0.7rem;
+  margin-top: -0.5rem;
 }
 
 .shipping {
