@@ -45,3 +45,24 @@
   border: none;
   text-transform: capitalize;
 }
+
+@media (max-width: 710px) {
+  .wrapper {
+    margin: 3.5rem 0 2rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .form,
+  .count,
+  .view__buttons {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}

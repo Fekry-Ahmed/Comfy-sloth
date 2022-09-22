@@ -8,3 +8,17 @@
 .wrapper > :first-child {
   grid-row: 1/ -1;
 }
+
+@media (max-width: 710px) {
+  .wrapper {
+    display: block;
+  }
+
+  .sort {
+    margin-bottom: 3rem;
+  }
+
+  .wrapper > :first-child {
+    grid-row: 1/ -1;
+  }
+}

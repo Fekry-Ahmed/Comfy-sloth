@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { productsActions } from '../store/products-slice';
 import classes from './Sort.module.css';
 
-const Sort = () => {
+const Sort = (props) => {
   const dispatch = useDispatch();
   const { gridView: isGridView, filteredProducts } = useSelector(
     (state) => state.products
