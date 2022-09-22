@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper li {
+  flex-basis: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem 2rem 2rem;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  color: var(--clr-grey-5);
+}

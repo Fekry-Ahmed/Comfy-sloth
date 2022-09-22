@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink, Link } from 'react-router-dom';
 import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa';
-
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+
+import { links } from '../utils/constants';
 
 import logo from '../assets/logo.svg';
 import classes from './Header.module.css';
-import { links } from '../utils/constants';
 
 const Header = () => {
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
   const [navIsOpen, setNavIsOpen] = useState(false);
 
   const toggleNav = () => {
@@ -43,7 +45,11 @@ const Header = () => {
             </ul>
           </nav>
           <div className={classes.actions}>
-            <Link to="/cart" className={classes.cart} data-count={5}>
+            <Link
+              to="/cart"
+              className={classes.cart}
+              data-count={totalQuantity}
+            >
               <span>cart</span>
               <FaShoppingCart></FaShoppingCart>
             </Link>

@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Colors from '../UI/Colors';
 import Stars from '../UI/Stars';
 import AmountButtons from '../AmountButtons';
 import classes from './ProductInformation.module.css';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { cartActions } from '../../store/cart-slice';
 
 const ProductInformation = ({ product }) => {
-  const { id, stock, price, colors, stars, name, description, company } =
-    product;
+  const [amount, setAmount] = useState(1);
+
+  const decrease = () => {
+    setAmount((prev) => {
+      if (prev === 1) return prev;
+      return prev - 1;
+    });
+  };
+  const increase = () => {
+    setAmount((prev) => prev + 1);
+  };
+
+  const dispatch = useDispatch();
+
+  const {
+    id,
+    stock,
+    price,
+    colors,
+    stars,
+    name,
+    description,
+    company,
+    images,
+  } = product;
 
   return (
     <div className={classes.details}>
@@ -33,8 +58,26 @@ const ProductInformation = ({ product }) => {
         <Colors colors={colors} />
       </div>
       <div className={classes.actions}>
-        <AmountButtons />
-        <Link to="/cart" className="btn">
+        <AmountButtons
+          amount={amount}
+          increase={increase}
+          decrease={decrease}
+        />
+        <Link
+          to="/cart"
+          className="btn"
+          onClick={() => {
+            dispatch(
+              cartActions.addItemToCart({
+                name,
+                id,
+                price,
+                image: images[0].url,
+                amount,
+              })
+            );
+          }}
+        >
           add to cart
         </Link>
       </div>

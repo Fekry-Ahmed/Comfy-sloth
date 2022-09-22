@@ -1,0 +1,40 @@
+.empty-cart {
+  text-align: center;
+}
+
+.empty-cart h2 {
+  margin-top: 3rem;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.empty-cart a {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  padding: 0.9rem 3rem;
+}
+
+.cartList {
+  border-bottom: 1px solid var(--clr-grey-7);
+  border-top: 1px solid var(--clr-grey-7);
+  padding: 4rem 0;
+  margin-bottom: 5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions button {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+  padding: 0.4rem 0.9rem;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  border-radius: 3px;
+}

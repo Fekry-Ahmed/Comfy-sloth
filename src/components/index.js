@@ -16,6 +16,8 @@ import Sort from './Sort';
 import Filter from './Filter';
 import GridView from './Products/GridView';
 import ListView from './Products/ListView';
+import CartHeader from './Cart/CartHeader';
+import CartItem from './Cart/CartItem';
 
 export {
   Header,
@@ -36,4 +38,6 @@ export {
   Filter,
   GridView,
   ListView,
+  CartItem,
+  CartHeader,
 };
