@@ -8,7 +8,19 @@ import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/cart-slice';
 
 const ProductInformation = ({ product }) => {
+  const {
+    id,
+    stock,
+    price,
+    colors,
+    stars,
+    name,
+    description,
+    company,
+    images,
+  } = product;
   const [amount, setAmount] = useState(1);
+  const [mainColor, setMainColor] = useState(colors[0]);
 
   const decrease = () => {
     setAmount((prev) => {
@@ -21,18 +33,6 @@ const ProductInformation = ({ product }) => {
   };
 
   const dispatch = useDispatch();
-
-  const {
-    id,
-    stock,
-    price,
-    colors,
-    stars,
-    name,
-    description,
-    company,
-    images,
-  } = product;
 
   return (
     <div className={classes.details}>
@@ -55,7 +55,11 @@ const ProductInformation = ({ product }) => {
       <hr />
       <div className={classes.info}>
         <span>Colors :</span>
-        <Colors colors={colors} />
+        <Colors
+          colors={colors}
+          mainColor={mainColor}
+          setMainColor={setMainColor}
+        />
       </div>
       <div className={classes.actions}>
         <AmountButtons
@@ -74,6 +78,7 @@ const ProductInformation = ({ product }) => {
                 price,
                 image: images[0].url,
                 amount,
+                color: mainColor,
               })
             );
           }}

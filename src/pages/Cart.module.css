@@ -21,6 +21,17 @@
   margin-bottom: 5rem;
 }
 
+@media (max-width: 991px) {
+  .cartList {
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 767px) {
+  .cartList {
+    padding: 2rem 0;
+  }
+}
+
 .actions {
   display: flex;
   justify-content: space-between;

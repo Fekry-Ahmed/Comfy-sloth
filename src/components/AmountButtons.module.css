@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 4rem;
+  font-size: 3.8rem;
 }
 
 .wrapper button {
@@ -17,6 +17,16 @@
 }
 
 .wrapper span {
-  font-size: 3.5rem;
+  font-size: 3.4rem;
   font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    font-size: 3.5rem;
+  }
+
+  .wrapper span {
+    font-size: 3rem;
+  }
 }

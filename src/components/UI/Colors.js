@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import { FaCheck } from 'react-icons/fa';
 import classes from './Colors.module.css';
 
-const Colors = ({ colors, onClick }) => {
-  const [mainColor, setMainColor] = useState(colors[0]);
-
+const Colors = ({ colors, onClick, mainColor, setMainColor }) => {
   return (
     <div className={classes.colors}>
       {colors.map((color, index) => (

@@ -65,6 +65,11 @@ html {
     font-size: 56.25%;
   }
 }
+@media (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
