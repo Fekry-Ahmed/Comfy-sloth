@@ -14,7 +14,7 @@ const Cart = () => {
     return (
       <section className={`container section page ${classes['empty-cart']}`}>
         <h2>Your cart is empty</h2>
-        <Link to="/products" className="btn">
+        <Link to="/comfy-sloth/products" className="btn">
           fill it
         </Link>
       </section>
