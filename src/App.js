@@ -36,13 +36,13 @@ const App = () => {
       <Header />
       <main className="main">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<ProductDetail />} />
-          <Route path="/checkout" element={<Chekout />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/comfy-sloth/" element={<Home />} />
+          <Route path="/comfy-sloth/about" element={<About />} />
+          <Route path="/comfy-sloth/cart" element={<Cart />} />
+          <Route path="/comfy-sloth/products" element={<Products />} />
+          <Route path="/comfy-sloth/products/:id" element={<ProductDetail />} />
+          <Route path="/comfy-sloth/checkout" element={<Chekout />} />
+          <Route path="/comfy-sloth/*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

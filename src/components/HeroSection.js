@@ -17,7 +17,7 @@ const HeroSection = () => {
             aperiam odio ducimus, obcaecati libero et quia tempora excepturi
             quis alias?
           </p>
-          <Link to="/products" className="btn">
+          <Link to="/comfy-sloth/products" className="btn">
             shop now
           </Link>
         </div>

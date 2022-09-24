@@ -32,7 +32,7 @@ const Cart = () => {
           ))}
         </ul>
         <div className={`${classes.actions} container `}>
-          <Link to="/products" className="btn">
+          <Link to="/comfy-sloth/products" className="btn">
             continue shopping
           </Link>
           <button

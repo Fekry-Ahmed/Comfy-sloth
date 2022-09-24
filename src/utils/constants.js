@@ -5,17 +5,17 @@ export const links = [
   {
     id: 1,
     text: 'home',
-    url: '/',
+    url: '/comfy-sloth/',
   },
   {
     id: 2,
     text: 'about',
-    url: '/about',
+    url: '/comfy-sloth/about',
   },
   {
     id: 3,
     text: 'products',
-    url: '/products',
+    url: '/comfy-sloth/products',
   },
 ];
 

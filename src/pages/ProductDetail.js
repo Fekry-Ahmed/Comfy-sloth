@@ -42,7 +42,7 @@ const ProductDetail = () => {
       <>
         <PageTitle product title={name} />
         <section className="section container">
-          <Link to="/products" className="btn">
+          <Link to="/comfy-sloth/products" className="btn">
             back to products
           </Link>
           <div className={classes.wrapper}>

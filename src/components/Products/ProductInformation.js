@@ -68,7 +68,7 @@ const ProductInformation = ({ product }) => {
           decrease={decrease}
         />
         <Link
-          to="/cart"
+          to="/comfy-sloth/cart"
           className="btn"
           onClick={() => {
             dispatch(

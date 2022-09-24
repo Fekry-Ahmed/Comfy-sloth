@@ -7,7 +7,7 @@ const NotFound = () => {
     <section className={`${classes.section} page`}>
       <h1>404</h1>
       <p>Sorry, the page you tried cannot be found</p>
-      <Link to="/" className="btn">
+      <Link to="/comfy-sloth/" className="btn">
         back home
       </Link>
     </section>

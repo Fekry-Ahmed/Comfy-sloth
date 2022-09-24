@@ -29,7 +29,7 @@ const GridView = (props) => {
             <p className={classes.product__description}>
               {`${product.description.substring(0, 150)} ...`}
             </p>
-            <Link to={`/products/${product.id}`} className="btn">
+            <Link to={`/comfy-sloth/products/${product.id}`} className="btn">
               details
             </Link>
           </div>

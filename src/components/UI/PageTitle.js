@@ -6,7 +6,7 @@ const PageTitle = (props) => (
   <div className={classes.wrapper}>
     <div className="container">
       <h2>
-        <Link to="/">home</Link>{' '}
+        <Link to="/comfy-sloth/">home</Link>{' '}
         {props.product ? <Link to="/products">/ products</Link> : null} /{' '}
         <span>{props.title}</span>
       </h2>

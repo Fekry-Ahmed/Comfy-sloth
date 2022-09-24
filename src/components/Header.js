@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink, Link } from 'react-router-dom';
-import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa';
+import { FaShoppingCart, FaUserPlus } from 'react-icons/fa';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 import { links } from '../utils/constants';
@@ -16,11 +16,14 @@ const Header = () => {
   const toggleNav = () => {
     setNavIsOpen((prev) => !prev);
   };
+  const closeNav = () => {
+    setNavIsOpen(false);
+  };
 
   return (
     <header>
       <div className={`container ${classes.header__container}`}>
-        <Link to="/" className={classes.logo}>
+        <Link to="/comfy-sloth/" className={classes.logo}>
           <img src={logo} alt="logo" className={classes.logo__img} />
         </Link>
         <div
@@ -33,6 +36,7 @@ const Header = () => {
               {links.map((link) => (
                 <li key={link.id} className={classes.nav__item}>
                   <NavLink
+                    onClick={closeNav}
                     to={link.url}
                     className={({ isActive }) =>
                       `${isActive ? classes.active : ''} ${classes.nav__link}`
@@ -46,7 +50,8 @@ const Header = () => {
           </nav>
           <div className={classes.actions}>
             <Link
-              to="/cart"
+              onClick={closeNav}
+              to="/comfy-sloth/cart"
               className={classes.cart}
               data-count={totalQuantity}
             >
