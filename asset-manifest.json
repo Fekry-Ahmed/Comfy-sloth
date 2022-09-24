@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/comfy-sloth/static/css/main.11d1b7aa.css",
-    "main.js": "/comfy-sloth/static/js/main.131fdf50.js",
+    "main.js": "/comfy-sloth/static/js/main.57a0480c.js",
     "static/media/hero-bcg.jpeg": "/comfy-sloth/static/media/hero-bcg.a876f19f6786a3aca992.jpeg",
     "static/media/hero-bcg-2.jpeg": "/comfy-sloth/static/media/hero-bcg-2.789918645915c8acb36f.jpeg",
     "static/media/logo.svg": "/comfy-sloth/static/media/logo.221f6b13e6eaaad5828372464f73a1a4.svg",
     "index.html": "/comfy-sloth/index.html",
     "main.11d1b7aa.css.map": "/comfy-sloth/static/css/main.11d1b7aa.css.map",
-    "main.131fdf50.js.map": "/comfy-sloth/static/js/main.131fdf50.js.map"
+    "main.57a0480c.js.map": "/comfy-sloth/static/js/main.57a0480c.js.map"
   },
   "entrypoints": [
     "static/css/main.11d1b7aa.css",
-    "static/js/main.131fdf50.js"
+    "static/js/main.57a0480c.js"
   ]
 }
